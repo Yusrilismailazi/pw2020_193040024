@@ -43,4 +43,4 @@ $mahasiswa  = query("SELECT * FROM mahasiswa");
 </table>
     
 </body>
-</html>
+</html> 
