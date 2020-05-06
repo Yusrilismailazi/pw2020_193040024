@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Bulan Mei 2020 pada 09.49
+-- Waktu pembuatan: 06 Bulan Mei 2020 pada 13.59
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -21,6 +21,37 @@ SET time_zone = "+00:00";
 --
 -- Database: `pw_193040024`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `alat_musik`
+--
+
+CREATE TABLE `alat_musik` (
+  `id` int(11) NOT NULL,
+  `nama_alat` varchar(100) NOT NULL,
+  `merk` varchar(100) NOT NULL,
+  `cara_permainan` varchar(100) NOT NULL,
+  `harga` varchar(100) NOT NULL,
+  `gambar` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `alat_musik`
+--
+
+INSERT INTO `alat_musik` (`id`, `nama_alat`, `merk`, `cara_permainan`, `harga`, `gambar`) VALUES
+(1, 'Gitar', 'Yamaha', 'Petik', 'Rp.700.000', 'gitar.png'),
+(2, 'Bass', 'Fender', 'Petik', 'Rp.1.300.000', 'bass.jpg'),
+(3, 'Drum', 'Rolling', 'pukul', 'Rp.1.500.000', 'drum.png'),
+(4, 'Pianika', 'Marvel', 'Tiup', 'Rp.100.000', 'pianika.jpg'),
+(5, 'Piano', 'Yamaha', 'Tekan', 'Rp.2.900.000', 'piano.jfif'),
+(6, 'Trumpet', 'Marchingband', 'Tiup', 'Rp.2.350.000', 'terompet.jfif'),
+(7, 'Jimbe', 'Maxtone', 'Pukul', 'Rp.250.000', 'jimbe.jpg'),
+(8, 'Kecapi', 'Siter', 'Petik', 'Rp.500.000', 'kecapi.jpg'),
+(9, 'Suling', 'Yamaha', 'Tiup', 'Rp.155.000', 'suling.png'),
+(10, 'Biola', 'Vienna', 'Gesek', 'Rp.1.100.000', 'biola.jpg');
 
 -- --------------------------------------------------------
 
@@ -53,9 +84,27 @@ INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`, `gambar`) VALU
 (9, 'Mohammad Rizki Ramdani', '193040016', '193040016.mohammad@mail.unpas.ac.id', 'Teknik Informatika', 'kiki.jpeg'),
 (10, 'Zahra Dwi Amelliar', '193040027', '193040027.zahra@mail.unpas.ac.id', 'Teknik Informatika', 'Zahra.jpeg');
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `alat_musik`
+--
+ALTER TABLE `alat_musik`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `mahasiswa`
@@ -64,14 +113,32 @@ ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `alat_musik`
+--
+ALTER TABLE `alat_musik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT untuk tabel `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

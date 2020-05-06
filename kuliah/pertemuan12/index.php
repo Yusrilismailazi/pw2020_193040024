@@ -63,7 +63,7 @@ if (isset($_POST['cari'])) {
     foreach ($mahasiswa as $m) : ?>
       <tr>
         <td><?= $i++; ?></td>
-        <td><img src="img/<?= $m['gambar']; ?>"></td>
+        <td><img src="img/<?= $m['gambar']; ?>"width="200px"></td>
         <td><?= $m['nama']; ?></td>
         <td>
           <a href="detail.php?id=<?= $m['id']; ?>">Lihat Detail</a>
