@@ -7,7 +7,7 @@ $result = query("SELECT * FROM alat_musik")
 <html>
 
 <head>
-  <title>Latihan 7 A</title>
+  <title>Latihan 7 C</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
