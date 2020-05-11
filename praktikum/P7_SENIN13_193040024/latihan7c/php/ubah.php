@@ -7,7 +7,7 @@ if(!isset($_SESSSION["username"])) {
 	exit;
 }
 $id = $_GET['id'];
-$i = query("SELECT * FROM elektronik WHERE id = $id")[0];
+$i = query("SELECT * FROM alat_musik WHERE id = $id")[0];
 
 if (isset($_POST["ubah"])) {
 	if (ubah($_POST) > 0) {
